@@ -36,7 +36,7 @@ export default class dateForm {
         month: this.timeObj.month - 1,
         isToday: false
       }
-      data.works = this.mathWho(data.month, data.date)
+      data.works = this.mathWho(data.month - 1, data.date)
       this.dateList.unshift(data)
     }
   }
@@ -91,7 +91,7 @@ export default class dateForm {
         month: this.timeObj.month + 1,
         isToday: false
       }
-      data.works = this.mathWho(data.month, data.date)
+      data.works = this.mathWho(data.month - 1, data.date)
       this.dateList.push(data)
     }
   }
@@ -108,7 +108,7 @@ export default class dateForm {
         month: this.timeObj.month,
         isToday: (newDate.getDate() === (i + 1) && (newDate.getMonth() + 1) === this.timeObj.month)
       }
-      data.works = this.mathWho(data.month, data.date)
+      data.works = this.mathWho(data.month - 1, data.date)
       this.dateList.push(data)
     }
     this.unshiftPrev()
