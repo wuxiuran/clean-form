@@ -11,9 +11,11 @@ export default class dateForm {
   }
   dateIndexInYear = (month, day) => {
     const nowDate = new Date()
+    nowDate.setDate(1)
     nowDate.setMonth(month)
     nowDate.setDate(day)
     const initTime = new Date()
+    initTime.setDate(1)
     initTime.setMonth(0) // 本年初始月份
     initTime.setDate(1) // 本年初始时间
     var differenceVal = nowDate - initTime ; // 今天的时间减去本年开始时间，获得相差的时间
