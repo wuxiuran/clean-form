@@ -100,7 +100,6 @@ export default class dateForm {
     this.otherDate.setDate(1)
     this.dateList.length = 0
     const newDate = new Date()
-    console.log(this.totalDay)
     for (let i = 0; i < this.totalDay; i ++) {
       this.otherDate.setDate(i + 1)
       const data = {
@@ -113,7 +112,6 @@ export default class dateForm {
       data.works = this.mathWho(data.month - 1, data.date)
       this.dateList.push(data)
     }
-    console.log(this.dateList)
     this.unshiftPrev()
     this.pushNext()
     return this.dateList
